@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension UIView {
     public func makeRound(cornerRadius: CGFloat, masksToBounds: Bool = false) {
