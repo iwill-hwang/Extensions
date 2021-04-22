@@ -8,13 +8,13 @@
 import Foundation
 
 extension UIView {
-    func makeRound(cornerRadius: CGFloat, masksToBounds: Bool = false) {
+    public func makeRound(cornerRadius: CGFloat, masksToBounds: Bool = false) {
         self.layer.cornerCurve = .continuous
         self.layer.cornerRadius = cornerRadius
         self.layer.masksToBounds = masksToBounds
     }
     
-    func makeRound(masksToBounds: Bool = false) {
+    public func makeRound(masksToBounds: Bool = false) {
         if self.frame.width != self.frame.height {
             self.layer.cornerCurve = .continuous
         }
