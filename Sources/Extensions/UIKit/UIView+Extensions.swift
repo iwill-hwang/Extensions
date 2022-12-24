@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  
-//
-//  Created by iwill.h on 2021/04/22.
-//
-
 import Foundation
 import UIKit
 

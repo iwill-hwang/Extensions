@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  
-//
-//  Created by donghyun on 2021/06/20.
-//
-
 import UIKit
 
 extension UIColor {
