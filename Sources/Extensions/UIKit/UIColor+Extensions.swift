@@ -1,7 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
-extension UIColor {
+public extension UIColor {
     public convenience init(r: Int, g: Int, b: Int, alpha: CGFloat = 1) {
         self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: alpha)
     }
@@ -11,7 +11,7 @@ extension UIColor {
     }
 }
 
-extension UIColor {
+public extension UIColor {
     func toString() -> String {
         var r:CGFloat = 0
         var g:CGFloat = 0
@@ -29,7 +29,7 @@ extension UIColor {
     }
 }
 
-extension String {
+public extension String {
     func toColor() -> UIColor? {
         var cString:String = self.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
 

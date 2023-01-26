@@ -1,7 +1,7 @@
 #if canImport(AppKit) && !targetEnvironment(macCatalyst)
 import AppKit
 
-extension NSColor {
+public extension NSColor {
     func toString() -> String {
         var r:CGFloat = 0
         var g:CGFloat = 0
@@ -19,7 +19,7 @@ extension NSColor {
     }
 }
 
-extension String {
+public extension String {
     func toColor() -> NSColor? {
         var cString:String = self.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
 
