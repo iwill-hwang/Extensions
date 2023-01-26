@@ -1,17 +1,7 @@
-#if canImport(UIKit)
-import UIKit
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
+import AppKit
 
-extension UIColor {
-    public convenience init(r: Int, g: Int, b: Int, alpha: CGFloat = 1) {
-        self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: alpha)
-    }
-    
-    public convenience init(rgb: Int, alpha: CGFloat = 1) {
-        self.init(red: CGFloat(rgb) / 255, green: CGFloat(rgb) / 255, blue: CGFloat(rgb) / 255, alpha: alpha)
-    }
-}
-
-extension UIColor {
+extension NSColor {
     func toString() -> String {
         var r:CGFloat = 0
         var g:CGFloat = 0
@@ -30,7 +20,7 @@ extension UIColor {
 }
 
 extension String {
-    func toColor() -> UIColor? {
+    func toColor() -> NSColor? {
         var cString:String = self.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
 
         if (cString.hasPrefix("#")) {
@@ -42,9 +32,10 @@ extension String {
         }
 
         var rgbValue: UInt64 = 0
+
         Scanner(string: cString).scanHexInt64(&rgbValue)
 
-        return UIColor(
+        return NSColor(
             red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
             green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
             blue: CGFloat(rgbValue & 0x0000FF) / 255.0,

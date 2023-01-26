@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import Foundation
 import UIKit
 
@@ -50,3 +51,5 @@ extension UITableView {
         return dequeueReusableHeaderFooterView(withIdentifier: type.identifier) as! T
     }
 }
+
+#endif

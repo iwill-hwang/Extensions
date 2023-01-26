@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import Foundation
 import UIKit
 
@@ -17,3 +18,5 @@ extension UIView {
         self.layer.masksToBounds = masksToBounds
     }
 }
+
+#endif
