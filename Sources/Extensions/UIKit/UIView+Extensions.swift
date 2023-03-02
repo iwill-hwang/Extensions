@@ -1,5 +1,4 @@
 #if canImport(UIKit)
-import Foundation
 import UIKit
 
 extension UIView {
@@ -19,4 +18,12 @@ extension UIView {
     }
 }
 
+extension UIView {
+    public func addShadow(radius: CGFloat = 3, opacity: Float = 0.15, offset: CGSize = .zero) {
+        layer.shadowOffset = CGSize(width: 0, height: 0)
+        layer.shadowRadius = radius
+        layer.shadowOpacity = opacity
+        layer.shadowOffset = offset
+    }
+}
 #endif
