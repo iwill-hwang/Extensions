@@ -41,6 +41,14 @@ public extension UIViewController {
         let cancel = UIAlertAction(title: NSLocalizedString("Cancel", comment: "Cancel"), style: .cancel, handler: { _ in
             completion?(false)
         })
+
+        if let popover = controller.popoverPresentationController {
+            let view = self.view!
+            popover.sourceView = view
+            popover.sourceRect = CGRect(x: view.bounds.size.width / 2.0, y: view.bounds.size.height / 2.0, width: 0, height: 0)
+
+            popover.permittedArrowDirections = []
+        }
         
         controller.addAction(ok)
         controller.addAction(cancel)
