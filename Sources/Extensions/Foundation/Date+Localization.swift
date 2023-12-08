@@ -15,6 +15,7 @@ public enum DateLocalizedFormat {
     case month_day
     case month_day_weekday
     case day
+    case day_weekday
     
     var template: String {
         switch self {
@@ -25,6 +26,7 @@ public enum DateLocalizedFormat {
         case .month_day:                return "dMMM"
         case .month_day_weekday:        return "dMMMEEEE"
         case .day:                      return "d"
+        case .day_weekday:              return "dEEEE"
         }
     }
 }
