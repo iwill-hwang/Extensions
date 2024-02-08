@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  
-//
-//  Created by donghyun on 2022/05/16.
-//
-
 import Foundation
 
 public enum DateLocalizedFormat {

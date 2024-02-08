@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  
-//
-//  Created by iwill.h on 2023/02/02.
-//
-
 import Foundation
 
 public extension String {
